@@ -29,7 +29,6 @@ int main(int argc, const char * argv[]) {
         int *c = (int *)NXMapGet(maptable, "kyson");
         printf("%p\n",c);
         
-        
     }
     return 0;
 }
