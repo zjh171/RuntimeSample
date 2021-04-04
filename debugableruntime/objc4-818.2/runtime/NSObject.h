@@ -105,6 +105,9 @@ OBJC_EXPORT
 + (NSString *)description;
 + (NSString *)debugDescription;
 
+
+-(void)aaaaa;
+
 @end
 
 #endif
