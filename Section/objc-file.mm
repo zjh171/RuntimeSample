@@ -31,6 +31,6 @@ UnsignedInitializer *getLibsectionInitializers(const headerType *mhdr, size_t *o
     return getDataSection<UnsignedInitializer>(mhdr, "__mod_init_func", nil, outCount);
 }
 
-UnsignedInitializer *getLibsectionInitializers(const header_info *hi, size_t *outCount) {
-    return getDataSection<UnsignedInitializer>(hi->mhdr(), "__mod_init_func", nil, outCount);
-}
+//UnsignedInitializer *getLibsectionInitializers(const header_info *hi, size_t *outCount) {
+//    return getDataSection<UnsignedInitializer>(hi->mhdr(), "__mod_init_func", nil, outCount);
+//}
