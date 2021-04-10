@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		965404F72621CABF0036BBA7 /* TestFunction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 965404E52621CABE0036BBA7 /* TestFunction.mm */; };
+		965404F82621CABF0036BBA7 /* TestVarVar.mm in Sources */ = {isa = PBXBuildFile; fileRef = 965404E62621CABE0036BBA7 /* TestVarVar.mm */; };
+		965404FB2621CABF0036BBA7 /* TestAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 965404EB2621CABE0036BBA7 /* TestAttribute.m */; };
+		965404FC2621CABF0036BBA7 /* TestMacro.mm in Sources */ = {isa = PBXBuildFile; fileRef = 965404EE2621CABF0036BBA7 /* TestMacro.mm */; };
+		965404FD2621CABF0036BBA7 /* TestCBlock.mm in Sources */ = {isa = PBXBuildFile; fileRef = 965404F02621CABF0036BBA7 /* TestCBlock.mm */; };
+		965404FE2621CABF0036BBA7 /* TestStaticClassMemberMutex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 965404F12621CABF0036BBA7 /* TestStaticClassMemberMutex.cpp */; };
+		965404FF2621CABF0036BBA7 /* TextVarVarC.c in Sources */ = {isa = PBXBuildFile; fileRef = 965404F42621CABF0036BBA7 /* TextVarVarC.c */; };
 		969F9BE4261FDAAD00821D59 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 969F9BE3261FDAAD00821D59 /* main.mm */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +30,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		965404E42621CABE0036BBA7 /* TestAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAttribute.h; sourceTree = "<group>"; };
+		965404E52621CABE0036BBA7 /* TestFunction.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TestFunction.mm; sourceTree = "<group>"; };
+		965404E62621CABE0036BBA7 /* TestVarVar.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TestVarVar.mm; sourceTree = "<group>"; };
+		965404EA2621CABE0036BBA7 /* TestCBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCBlock.h; sourceTree = "<group>"; };
+		965404EB2621CABE0036BBA7 /* TestAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestAttribute.m; sourceTree = "<group>"; };
+		965404EC2621CABF0036BBA7 /* TestFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFunction.h; sourceTree = "<group>"; };
+		965404ED2621CABF0036BBA7 /* TestMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestMacro.h; sourceTree = "<group>"; };
+		965404EE2621CABF0036BBA7 /* TestMacro.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TestMacro.mm; sourceTree = "<group>"; };
+		965404F02621CABF0036BBA7 /* TestCBlock.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TestCBlock.mm; sourceTree = "<group>"; };
+		965404F12621CABF0036BBA7 /* TestStaticClassMemberMutex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestStaticClassMemberMutex.cpp; sourceTree = "<group>"; };
+		965404F32621CABF0036BBA7 /* TestVarVar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVarVar.h; sourceTree = "<group>"; };
+		965404F42621CABF0036BBA7 /* TextVarVarC.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TextVarVarC.c; sourceTree = "<group>"; };
+		965404F62621CABF0036BBA7 /* TestStaticClassMemberMutex.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TestStaticClassMemberMutex.hpp; sourceTree = "<group>"; };
 		969F9BE0261FDAAD00821D59 /* HookModInitDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HookModInitDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		969F9BE3261FDAAD00821D59 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +78,19 @@
 			isa = PBXGroup;
 			children = (
 				969F9BE3261FDAAD00821D59 /* main.mm */,
+				965404E42621CABE0036BBA7 /* TestAttribute.h */,
+				965404EB2621CABE0036BBA7 /* TestAttribute.m */,
+				965404EA2621CABE0036BBA7 /* TestCBlock.h */,
+				965404F02621CABF0036BBA7 /* TestCBlock.mm */,
+				965404EC2621CABF0036BBA7 /* TestFunction.h */,
+				965404E52621CABE0036BBA7 /* TestFunction.mm */,
+				965404ED2621CABF0036BBA7 /* TestMacro.h */,
+				965404EE2621CABF0036BBA7 /* TestMacro.mm */,
+				965404F12621CABF0036BBA7 /* TestStaticClassMemberMutex.cpp */,
+				965404F62621CABF0036BBA7 /* TestStaticClassMemberMutex.hpp */,
+				965404F32621CABF0036BBA7 /* TestVarVar.h */,
+				965404E62621CABE0036BBA7 /* TestVarVar.mm */,
+				965404F42621CABF0036BBA7 /* TextVarVarC.c */,
 			);
 			path = HookModInitDemo;
 			sourceTree = "<group>";
@@ -118,7 +151,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				965404FB2621CABF0036BBA7 /* TestAttribute.m in Sources */,
 				969F9BE4261FDAAD00821D59 /* main.mm in Sources */,
+				965404FF2621CABF0036BBA7 /* TextVarVarC.c in Sources */,
+				965404FD2621CABF0036BBA7 /* TestCBlock.mm in Sources */,
+				965404F72621CABF0036BBA7 /* TestFunction.mm in Sources */,
+				965404FE2621CABF0036BBA7 /* TestStaticClassMemberMutex.cpp in Sources */,
+				965404FC2621CABF0036BBA7 /* TestMacro.mm in Sources */,
+				965404F82621CABF0036BBA7 /* TestVarVar.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

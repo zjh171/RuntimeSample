@@ -6,15 +6,6 @@
 //
 
 #import <Foundation/Foundation.h>
-//
-//  hook_cpp_init.m
-//  QWLoadTrace
-//
-//  Created by everettjf on 2016/11/30.
-//  Copyright © 2016年 Alipay. All rights reserved.
-//
-
-#import <Foundation/Foundation.h>
 #include <unistd.h>
 #include <mach-o/getsect.h>
 #include <mach-o/loader.h>
@@ -141,6 +132,19 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
         NSLog(@"Hello, World!");
+
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                //2.0秒后追加任务代码到主队列，并开始执行
+                //打印当前线程
+//                NSLog(@"after---%@",[NSThread currentThread]);
+
+            getallinitinfo();
+
+        });
+        
+
+        
     }
     return 0;
 }
