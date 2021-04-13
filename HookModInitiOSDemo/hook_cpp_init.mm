@@ -1,8 +1,9 @@
 //
-//  main.m
-//  HookModInitDemo
+//  hook_cpp_init.m
+//  QWLoadTrace
 //
-//  Created by kyson on 2021/4/9.
+//  Created by everettjf on 2016/11/30.
+//  Copyright © 2016年 Alipay. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -12,22 +13,6 @@
 #include <mach-o/dyld.h>
 #include <dlfcn.h>
 #include <vector>
-
-
-
-class Foo1Object{
-public:
-    Foo1Object(){
-        // do somthing
-        NSLog(@"in fooobject======");
-    }
-    
-};
-
-static Foo1Object globalObj = Foo1Object();
-Foo1Object globalObj2 = Foo1Object();
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 static NSMutableArray *sInitInfos;
 static NSTimeInterval sSumInitTime;
@@ -60,11 +45,11 @@ static MemoryType g_aslr;
 
 struct MyProgramVars
 {
-    const void*        mh;
-    int*            NXArgcPtr;
-    const char***    NXArgvPtr;
-    const char***    environPtr;
-    const char**    __prognamePtr;
+    const void*		mh;
+    int*			NXArgcPtr;
+    const char***	NXArgvPtr;
+    const char***	environPtr;
+    const char**	__prognamePtr;
 };
 
 typedef void (*OriginalInitializer)(int argc, const char* argv[], const char* envp[], const char* apple[], const MyProgramVars* vars);
@@ -110,10 +95,8 @@ static void hookModInitFunc(){
     g_aslr = (MemoryType)mhp;
 }
 
-@interface FooObject : NSObject
-@end
+@interface FooObject : NSObject @end
 @implementation FooObject
-
 + (void)load{
     printf("foo object load \n");
     
@@ -122,29 +105,20 @@ static void hookModInitFunc(){
     g_cur_index = -1;
     g_aslr = 0;
     
-    hookModInitFunc();
-}
 
+    //dispatch_time_t参数
+    dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, (ino64_t)(1 * NSEC_PER_SEC));
+
+    //dispatch_queue_t参数
+    dispatch_queue_t queue = dispatch_get_main_queue();//主队列
+
+    //dispatch_after函数
+    dispatch_after(time, queue, ^{
+        //Code
+        hookModInitFunc();
+
+    });
+    
+}
 @end
 
-
-int main(int argc, const char * argv[]) {
-    @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
-
-        
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                //2.0秒后追加任务代码到主队列，并开始执行
-                //打印当前线程
-//                NSLog(@"after---%@",[NSThread currentThread]);
-
-            getallinitinfo();
-
-        });
-        
-
-        
-    }
-    return 0;
-}
