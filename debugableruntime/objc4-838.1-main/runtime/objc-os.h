@@ -1042,12 +1042,7 @@ ustrdupMaybeNil(const uint8_t *str)
 // This version order matches OBJC_AVAILABLE.
 //
 // NOTE: prefer dyld_program_sdk_at_least when possible
-#define sdkIsAtLeast(x, i, t, w, b)                                    \
-    (dyld_program_sdk_at_least(dyld_platform_version_macOS_ ## x)   || \
-     dyld_program_sdk_at_least(dyld_platform_version_iOS_ ## i)     || \
-     dyld_program_sdk_at_least(dyld_platform_version_tvOS_ ## t)    || \
-     dyld_program_sdk_at_least(dyld_platform_version_watchOS_ ## w) || \
-     dyld_program_sdk_at_least(dyld_platform_version_bridgeOS_ ## b))
+#define sdkIsAtLeast(x, i, t, w, b) true
 
 
 #ifndef __BUILDING_OBJCDT__

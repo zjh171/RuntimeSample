@@ -84,8 +84,8 @@
 #include "objc-private.h"
 
 #if TARGET_OS_OSX
-#include <Cambria/Traps.h>
-#include <Cambria/Cambria.h>
+//#include <Cambria/Traps.h>
+//#include <Cambria/Cambria.h>
 #endif
 
 #if __arm__  ||  __x86_64__  ||  __i386__
@@ -1120,14 +1120,14 @@ static int _collecting_in_critical(void)
 
         // Find out where thread is executing
 #if TARGET_OS_OSX
-        if (oah_is_current_process_translated()) {
-            kern_return_t ret = objc_thread_get_rip(threads[count], (uint64_t*)&pc);
-            if (ret != KERN_SUCCESS) {
-                pc = PC_SENTINEL;
-            }
-        } else {
+//        if (oah_is_current_process_translated()) {
+//            kern_return_t ret = objc_thread_get_rip(threads[count], (uint64_t*)&pc);
+//            if (ret != KERN_SUCCESS) {
+//                pc = PC_SENTINEL;
+//            }
+//        } else {
             pc = _get_pc_for_thread (threads[count]);
-        }
+//        }
 #else
         pc = _get_pc_for_thread (threads[count]);
 #endif

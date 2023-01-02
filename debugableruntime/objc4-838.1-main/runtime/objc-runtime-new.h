@@ -791,7 +791,8 @@ public:
 
     // All shared cache relative method lists names are offsets from this selector.
     static uintptr_t sharedCacheRelativeMethodBase() {
-        return (uintptr_t)@selector(🤯);
+//        return (uintptr_t)@selector(🤯);
+        return (uintptr_t)@selector(iOS开发之深入理解RuntimeByKyson);
     }
 
     // The pointer modifier used with method lists. When the method
