@@ -5,7 +5,7 @@
 
 ### debugableruntime
 
-可编译的 runtime 版本
+可编译的 runtime 版本，版本对应的系统在文章 https://xiaozhuanlan.com/topic/9178403562 中有提及。
 
 ### Hash Map
 
