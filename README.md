@@ -18,5 +18,16 @@ KSNXHashTable.c KSNXHashTable.h KSNXMapTable.c KSNXMapTable.h 这四个文件是
 剥离出 runtime 中的日志系统。使用方式很简单，直接跑 demo 工程即可。
 
 
+| 基本类型 | 包装器类型 |
+| --------   | ----- | 
+|boolean|	Boolean|
+|char	|Character|
+|int|	Integer|
+|byte|	Byte|
+|short|	Short|
+|long|	Long|
+|float|	Float|
+|double|	Double|
+
 
 
